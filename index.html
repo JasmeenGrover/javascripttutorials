@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Code Execution</h1>
+    <p>JavaScript code is executed in two phases.</p>
+    <ul>
+        <li>Memory allocation phase</li>
+        <li>Code execution phase</li>
+    </ul>
+    <h3>Memory Allocation Phase</h3>
+    <p>Functions and variables get stored in a memory as a key value pair for execution context.</p>
+    <ul>
+        <li><b>Assigns undefined value to the variables.</b></li>
+        <li><b>Copies whole function in memory.</b></li>
+    </ul>
+    <h3>Code Execution Phase</h3>
+    <p>JavaScript executes code line by line.One line at once.It follows synchronus approach.</p>
+    <p>In the Code Execution Phase, JavaScript being a single thread language runs through the code line by line and updates the values of function and variables which are stored in the Memory Allocation Phase in the Memory Component.</p>
+    <script>
+        var a;
+        console.log(a);
+        function memoryFunction()
+        {
+            return;
+        }
+        console.log("function is copied in memory");
+        console.log(memoryFunction);
+    </script>
+    <h3>Call Stack</h3>
+    <p>JavaScript pushes the whole program as global context into a stack known as Call Stack.</p>
+    <p>When code execution gets completed, Global execution context gets deleted and popped out from call stack making the call stack empty.</p>
+    <h3>Difference between undefined and not defined</h3>
+    <ul>
+        <li>
+            undefined
+        </li>
+    </ul>
+    <ol>
+        <li>
+            When a variable is declared but no value is assigned to it.
+        </li>
+        <li>
+            Variable is called for execution.
+        </li>
+        <li>
+            For example-
+            <p>var x; console.log(x) </p>
+            <p>Output of code will be undefined.</p>
+        </li>
+    </ol>
+    <script>
+        var x; 
+        console.log(x) 
+    </script>
+    <ul>
+        <li>
+            Notdefined
+        </li>
+    </ul>
+    <ol>
+        <li>
+            When a variable is called for execution before declaring it.
+        </li>
+        <li>
+            For example-
+            <p>console.log(y);</p>
+            <p>y=7;</p>
+            <p>Output of code will be notdefined.</p>
+            <script>
+                console.log(y);
+                 y=7;
+            </script>
+        </li>
+        <li>
+            if a variable is declared using var keyword than value of variable undefined will be printed.
+            <script>
+                console.log(y);
+                var y=7;
+            </script>
+        </li>
+    </ol>
+    <a href="https://www.geeksforgeeks.org/javascript-code-execution/"> Sources for today session revision.</a> <br> <br>
+    <a href="https://javascript.info/getting-started">Sources for today session revision.</a> <br> <br>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Sources for today session revision.</a>
+    <script>
+        alert("Hi, JavaScript");
+    </script>
+</body>
+</html>
